@@ -44,7 +44,7 @@ function App() {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner()                                     // signs
       const contract = new ethers.Contract(greeterAddress, Greeter.abi, signer) // notice how it is "signer" for a change on the blockchain
-      const transaction = await contract.setGreeting(greeting)
+      const transaction = await contract.setGreeting(greeting)                  // uses gas
       setGreetingValue('')
       await transaction.wait()        // wait for the transaction to be confirmed on the blockchain; in a prod env this might take a while
       fetchGreeting()                 // logs out greeting

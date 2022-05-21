@@ -18,7 +18,8 @@ npm start
 ^^ This starts the react app and opens up the Greeting site that users can interact with.
 
 ## Errors
-**NONCE ERROR??** Try resetting your Metamask account. (Majorirty of errors I run into disappear after resetting :joy:)
+**NONCE ERROR??** Try resetting your Metamask account. (Majorirty of errors I run into disappear after resetting)
+**Anything else?** Inspect webpage and go to console to see specific error message. Google and debug.
 
 ## References/Disclaimer
 I am not responsible for the majority of this code! The blog post by Nader Dabit which is found [here](https://dev.to/dabit3/the-complete-guide-to-full-stack-ethereum-development-3j13)
