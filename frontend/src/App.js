@@ -11,6 +11,7 @@ import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json'
 const greeterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
 
 function App() {
+
   const [greeting, setGreetingValue] = useState('')
 
    // request access to the user's MetaMask account
@@ -26,7 +27,8 @@ function App() {
       const contract = new ethers.Contract(greeterAddress, Greeter.abi, provider)
       try {
         const data = await contract.greet()     // obtain current set Greeting
-        console.log('data: ', data)             // print out set Greeting
+        alert(data)
+        console.log('\ndata: ', data)             // print out set Greeting
       } catch (err) {
         console.log("Error: ", err)
       }
@@ -47,7 +49,7 @@ function App() {
       const transaction = await contract.setGreeting(greeting)                  // uses gas
       setGreetingValue('')
       await transaction.wait()        // wait for the transaction to be confirmed on the blockchain; in a prod env this might take a while
-      fetchGreeting()                 // logs out greeting
+      //fetchGreeting()                 // logs out greeting
     }
   }
 
@@ -66,11 +68,12 @@ function App() {
         <input className="text_box"
           onChange={e => setGreetingValue(e.target.value)}
           placeholder="Set greeting"
+          id ="set"
           value={greeting}
         />
       </header>
     </div>
   );
-}
 
+}
 export default App;
