@@ -29,7 +29,7 @@ function App() {
         const data = await contract.greet()     // obtain current set Greeting
         alert(data)
 
-        console.log('\ndata: ', data)             // print out set Greeting
+        console.log('data: ', data)             // print out set Greeting
       } catch (err) {
         console.log("Error: ", err)
       }
