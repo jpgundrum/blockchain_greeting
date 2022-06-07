@@ -54,7 +54,6 @@ npx hardhat run scripts/deploy.js --network localhost
 Go into the frontend folder which contains Javascript, CSS, and React elements used in the webpage.
 Then finally start the server!
 ```
-cd frontend
 npm start
 ```
 Congratulations! Your first web3 site is active! 
